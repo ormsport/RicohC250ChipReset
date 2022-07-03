@@ -9,6 +9,26 @@ This sketch using ATmega328P(Arduino Uno/Nano) to read/write Ricoh Aficio SP C25
 - Ricoh SP C261DNw
 - Ricoh SP C261SFNw
 
+## Features
+- Set toner to full. (chip reset)
+- Set toner to empty. (may useless)
+- Selectable. (each toner cartridge, all present toner cartridge)
+- Write custom data. (1 to 128 bytes, but can not use with all present toner cartridge.)
+
+## Operation
+- f - set to full
+- e - set to empty
+- c - write custom data
+
+## Target
+- c - cyan
+- m - magenta
+- y - yellow
+- k - black
+- a - all present toner cartridge (can not use with custom data)
+
+Note: Each entry will appear only when detected.
+
 ## I2C Addresses
 | Toner         | Addresses(DEC - HEX)  |
 | ------------- | --------------------- |
@@ -16,3 +36,6 @@ This sketch using ATmega328P(Arduino Uno/Nano) to read/write Ricoh Aficio SP C25
 | C - cyan      | 82 - 0x52             |
 | M - magenta   | 81 - 0x51             |
 | Y - yellow    | 80 - 0x50             |
+
+## Sample Schematic
+Soon!
