@@ -15,12 +15,22 @@ This sketch using ATmega328P(Arduino Uno/Nano) to read/write Ricoh Aficio SP C25
 - Selectable. (each toner cartridge, all present toner cartridge)
 - Write custom data. (1 to 128 bytes, but can not use with all present toner cartridge.)
 
-## Operation
+## Usage
+1. Open sketch in Arduino IDE.
+2. To write custom data, add your data to variable shown below. If just want to do a chip reset, skip this step.
+```C++
+const byte CUSTOM_DATA[] = {168,0,1,...};
+```
+3. Upload sketch to your board.
+4. Following the instruction shown in serial monitor.
+
+## Options
+### Operation
 - f - set to full
 - e - set to empty
 - c - write custom data
 
-## Target
+### Target
 - c - cyan
 - m - magenta
 - y - yellow
