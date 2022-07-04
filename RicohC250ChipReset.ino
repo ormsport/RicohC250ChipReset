@@ -139,7 +139,7 @@ void setup() {
             if (m) Serial.print(F("m-magenta, "));
             if (y) Serial.print(F("y-yellow, "));
             if (k && op != 2) Serial.print(F("k-black, "));
-            else Serial.println(F("k-black"));
+            else if (k) Serial.println(F("k-black"));
             if (op != 2) Serial.println(F("a-all present toner cartridge"));
             while(!Serial.available());
             while(Serial.available()) {
@@ -288,9 +288,6 @@ void setup() {
                     }
                     
                 } else {
-                    if (target == 'a') {
-                        Serial.print(F("Preparing data for "));
-                    }
                     for (uint8_t i=0; i<nDevices; i++) {
                         Serial.print(F("Preparing data for "));
                         byte buffer[128];
